@@ -12,5 +12,5 @@ script:
   - flake8 --ignore=F401 twilio
   - flake8 --ignore=E123,E126,E128,E501 tests
   - nosetests tests/  --with-xunit --xunit-file=shippable/testresults/nosetests.xml
-  - coverage run --branch tests/
-  - coverage xml -o shippable/codecoverage/coverage.xml tests/
+  - coverage run --branch tests/test_accounts.py
+  - coverage xml -o shippable/codecoverage/coverage.xml tests/test_accounts.py
